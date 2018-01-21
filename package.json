@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Chinafreak/AmmoReloaded-WebWallet#readme",
   "dependencies": {
-    "bitcoin": "^3.0.1"
+    "bitcoin": "^3.0.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
   }
 }
