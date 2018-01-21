@@ -1,0 +1,22 @@
+{
+  "name": "ammoreloaded-webwallet",
+  "version": "1.0.0",
+  "description": "webwallet for ammoreloaded",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinafreak/AmmoReloaded-WebWallet.git"
+  },
+  "author": "Yan Hülsebusch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chinafreak/AmmoReloaded-WebWallet/issues"
+  },
+  "homepage": "https://github.com/Chinafreak/AmmoReloaded-WebWallet#readme",
+  "dependencies": {
+    "bitcoin": "^3.0.1"
+  }
+}
