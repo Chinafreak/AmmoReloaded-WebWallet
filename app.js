@@ -12,11 +12,14 @@ var client = new ammo.Client({
   timeout: 30000
 });
 
-app.post('/getBalance/:address', function (req, res) {
-  //var address = req.body.address;
+app.post('/getbalance/:address', function (req, res) {
   var address = req.params.address;
   if (address) {
-    res.send("Balance for " + address + ": " + "0.150 AMMO");
+    client.listUnspent(address, 0, (err, balance, resHeaders) => {
+      if (err) return res.send(err);
+      res.send("Balance for " + address + ": " + balance + " AMMO");
+    })
+
   } else {
     res.send("Address is missing");
   }
@@ -26,10 +29,7 @@ app.listen(3001, function () {
   console.log("Example app listening on port 3001!");
 })
 
-client.getBalance('*', 0, (err, balance, resHeaders) => {
-  if (err) return console.log(err);
-  console.log('Balance:', balance);
-})
+
 
 client.getBlockCount((err, block, resHeaders) => {
   if (err) return console.log(err);
